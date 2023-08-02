@@ -1,5 +1,6 @@
 // Базовые настройки необходимы чтобы Dio правельно функционировал
 import 'package:dio/dio.dart';
+import 'package:flutter/foundation.dart';
 
 class DioSettings {
   DioSettings() {
@@ -37,6 +38,6 @@ class DioSettings {
         return handler.next(response);
       },
     );
-    //interceptors.addAll([if (kDebugMode) logInterceptor, headerInterceptors]);
+    interceptors.addAll([if (kDebugMode) logInterceptor, headerInterceptors]);
   }
 }
