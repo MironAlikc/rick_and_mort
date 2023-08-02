@@ -8,7 +8,7 @@ class HomePageScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    BlocProvider.of<GetcharacterCubit>(context).getCharecter();
+    BlocProvider.of<GetcharacterCubit>(context).getCharecter('');
 
     String defaultImage =
         'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSnLktbp1RXOlE4lQtsuDpyTpmbNuEgXb67MA&usqp=CAU';
@@ -19,7 +19,9 @@ class HomePageScreen extends StatelessWidget {
         child: Column(
           children: [
             TextField(
-              onChanged: (value) {},
+              onChanged: (value) {
+                BlocProvider.of<GetcharacterCubit>(context).getCharecter(value);
+              },
               decoration: const InputDecoration(
                 hintText: 'Search',
                 border: OutlineInputBorder(),

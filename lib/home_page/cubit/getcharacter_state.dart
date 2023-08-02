@@ -1,11 +1,6 @@
 part of 'getcharacter_cubit.dart';
 
-abstract class GetcharacterState {
-  const GetcharacterState();
-
-  @override
-  List<Object> get props => [];
-}
+abstract class GetcharacterState {}
 
 class GetcharacterInitial extends GetcharacterState {}
 

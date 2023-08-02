@@ -9,9 +9,9 @@ class GetcharacterCubit extends Cubit<GetcharacterState> {
 
   final GetCharacterRepo repo;
 
-  Future getCharecter() async {
+  Future getCharecter(String? name) async {
     try {
-      final model = await repo.getCharacrerData();
+      final model = await repo.getCharacrerData(name: name ?? '');
       emit(GetcharacterSuccess(model: model));
     } catch (e) {
       emit(GetcharacterError());
