@@ -10,3 +10,4 @@ class GetCharacterRepo {
     return CharacterModel.fromJson(response.data);
   }
 }
+ 

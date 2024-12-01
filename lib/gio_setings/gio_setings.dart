@@ -31,7 +31,7 @@ class DioSettings {
     );
     final headerInterceptors = QueuedInterceptorsWrapper(
       onRequest: (options, handler) => handler.next(options),
-      onError: (DioError error, handler) {
+      onError: (DioException error, handler) {
         handler.next(error);
       },
       onResponse: (response, handler) {
